@@ -97,7 +97,7 @@ class CheckoutService:  # Tanggung jawab tunggal: Mengkoordinasi Checkout
         if payment_success:
             order.status = "paid"
             self.notifier.send(order)  # Delegasi 2
-            LOGGER.info("Checkout Sukses. Status pesanan: PAID")
+            LOGGER.info("Checkout Sukses. Status pesanan: PAID") 
             return True
         else:
             # Gunakan level ERROR/WARNING untuk masalah
